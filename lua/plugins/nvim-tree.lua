@@ -44,7 +44,7 @@ vim.g.nvim_tree_auto_open = 1 -- 0 by default, open the tree when typing 'vim $D
 vim.g.nvim_tree_auto_close = 1 -- 0 by default, close the tree when it's the last window.
 vim.g.nvim_tree_tab_open  = 1 -- 0 by default, open the tree when entering a new tab and the tree was previously open.
 --vim.g.nvim_tree_quit_on_open = 1 -- 0 by default, close the tree when you open a file.
---vim.g.nvim_tree_auto_ignore_ft = {'startify', 'dashboard'} -- empty by default, not auto open tree on specific filetypes.
+vim.g.nvim_tree_auto_ignore_ft = {'startify', 'dashboard'} -- empty by default, not auto open tree on specific filetypes.
 
 vim.g.nvim_tree_add_trailing = 1 -- 0 by default, append a trailing slash to folder names.
 vim.g.nvim_tree_indent_markers = 1 -- 0 by default, show indent markers when folders are open.
