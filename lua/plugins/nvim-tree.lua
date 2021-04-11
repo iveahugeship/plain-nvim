@@ -19,9 +19,9 @@ vim.g.nvim_tree_bindings = {
   ['p'] = tree_cb('paste'),
   ['r'] = tree_cb('rename'),
   ['q'] = tree_cb('close'),
-  ['H'] = tree_cb('toggle_dotfiles'),
-  ['I'] = tree_cb('toggle_ignored'),
-  ['R'] = tree_cb('refresh')
+  ['<C-h>'] = tree_cb('toggle_dotfiles'),
+  ['<C-i>'] = tree_cb('toggle_ignored'),
+  ['<C-r>'] = tree_cb('refresh')
 }
 
 vim.api.nvim_set_keymap('', '<C-f>', ':NvimTreeToggle<CR>', {})
