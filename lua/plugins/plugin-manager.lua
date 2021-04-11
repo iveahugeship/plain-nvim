@@ -18,7 +18,6 @@ local paq = require('paq-nvim').paq
 paq{'savq/paq-nvim'}  
 
 
-
 local utils = { }
 
 function utils.add_plugin(name)
