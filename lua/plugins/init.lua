@@ -1,6 +1,11 @@
 -- Plugins module.
 
-require('plugins.nvim-tree')
-require('plugins.nvim-web-devicons')
-require('plugins.startify')
+require('plugins.pmanager')
+require('plugins.dashboard-nvim')
+require('plugins.plenary')
+require('plugins.popup')
+require('plugins.telescope')
+--require('plugins.nvim-tree')
+--require('plugins.nvim-web-devicons')
+--require('plugins.startify')
 
