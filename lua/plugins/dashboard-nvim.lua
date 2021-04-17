@@ -33,5 +33,5 @@ vim.cmd('au FileType dashboard nnoremap <buffer> <C-q>  :q!<cr>')
 
 vim.g.dashboard_default_executive = 'telescope' -- Backend fuzzy finder utility.
 
-vim.cmd('au BufUnload * :SessionSave') -- Save session after the buffer closing.
+vim.cmd('au BufUnload * :silent SessionSave') -- Save session after the buffer closing.
 
