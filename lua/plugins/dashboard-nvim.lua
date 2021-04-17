@@ -31,14 +31,15 @@ vim.g.dashboard_custom_section = { -- Your sections.
   b = {description = {'  Load Last Session  '}, command = 'SessionLoad'},
   c = {description = {'  Recently Used Files'}, command = 'DashboardFindHistory'},
   d = {description = {'  Find File          '}, command = 'DashboardFindFile'},
-  e = {description = {'  Find Word          '}, command = 'DashboardFindWord'}
+  e = {description = {'  Find Word          '}, command = 'DashboardFindWord'},
+  f = {description = {'ﰳ  Quit               '}, command = 'q!'}
 }
 
 vim.g.dashboard_custom_footer = { -- And footer.
-  'by iveahugeship',
+  'by iveahugeship'
 }
 
 vim.g.dashboard_default_executive = 'telescope' -- Backend fuzzy finder utility.
 
-vim.api.nvim_command('au BufUnload * :SessionSave') -- Save session after the buffer closing.
+vim.cmd('au BufUnload !dashboard :SessionSave') -- Save session after the buffer closing.
 
