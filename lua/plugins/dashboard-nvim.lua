@@ -3,30 +3,18 @@
 
 require('plugins.pmanager').add('glepnir/dashboard-nvim')
 
-vim.g.dashboard_custom_header = { -- Define your own header.
-  '            ⣀⠀⠤⠴⠶⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀', 
-  '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣾⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀',
-  '⠀⠀⠀⠀⠀⠀⠀⠂⠉⡇⠀⠀⠀⢰⣿⣿⣿⣿⣧⠀⠀⢀⣄⣀⠀⠀⠀⠀⠀⠀',
-  '⠀⠀⠀⠀⠀⠀⢠⣶⣶⣷⠀⠀⠀⠸⠟⠁⠀⡇⠀⠀⠀⠀⠀⢹⠀⠀⠀⠀⠀⠀',
-  '⠀⠀⠀⠀⠀⠀⠘⠟⢹⣋⣀⡀⢀⣤⣶⣿⣿⣿⣿⣿⡿⠛⣠⣼⣿⡟⠀⠀⠀⠀',
-  '⠀⠀⠀⠀⠀⣴⣾⣿⣿⣿⣿⢁⣾⣿⣿⣿⣿⣿⣿⡿⢁⣾⣿⣿⣿⠁⠀⠀⠀⠀',
-  '⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⠿⠇⠀⠀⠀⠀',
-  '⠀⠀⠀⠳⣤⣙⠟⠛⢻⠿⣿⠸⣿⣿⣿⣿⣿⣿⣿⣇⠘⠉⠀⢸⠀⢀⣠⠀⠀⠀',
-  '⠀⠀⠀⠀⠈⠻⣷⣦⣼⠀⠀⠀⢻⣿⣿⠿⢿⡿⠿⣿⡄⠀⠀⣼⣷⣿⣿⠀⠀⠀',
-  '⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣶⣄⡈⠉⠀⠀⢸⡇⠀⠀⠉⠂⠀⣿⣿⣿⣧⠀⠀⠀',
-  '⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣷⣤⣀⣸⣧⣠⣤⣴⣶⣾⣿⣿⣿⡿⠀⠀⠀',
-  '⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀',
-  '⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠛⠉⠀⠀⠀⠀',
-  '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀'
---  '███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
---  '████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
---  '██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
---  '██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
---  '██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
---  '╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝'
+-- Set header.
+vim.g.dashboard_custom_header = {
+  '███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
+  '████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
+  '██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
+  '██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
+  '██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
+  '╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝'
 }
 
-vim.g.dashboard_custom_section = { -- Your sections.
+-- Set some sections.
+vim.g.dashboard_custom_section = {
   a = {description = {'  New File                   ctrl-n  '}, command = 'enew'},
   b = {description = {'  Load Last Session          ctrl-l  '}, command = 'SessionLoad'},
   c = {description = {'  Recently Used Files        ctrl-f h'}, command = 'DashboardFindHistory'},
@@ -35,19 +23,16 @@ vim.g.dashboard_custom_section = { -- Your sections.
   f = {description = {'ﰳ  Quit                       ctrl-q  '}, command = 'q!'}
 }
 
-vim.g.dashboard_custom_footer = { -- And footer.
-  'by iveahugeship'
-}
-
-vim.g.dashboard_default_executive = 'telescope' -- Backend fuzzy finder utility.
-
-vim.cmd('au BufUnload !dashboard :SessionSave') -- Save session after the buffer closing.
-
--- Key Mapping
+-- Key Map.
+-- FIXME: this binds work on first opened window.
 vim.cmd('nnoremap <buffer> <C-n>  :enew<cr>')
-vim.cmd('nnoremap <buffer> <C-l>  :SessionLoad<cr>')
+vim.cmd('nnoremap <buffer> <C-l>  :SessionLoad<cr>') -- FIXME: sessions opened from dashboard doesn't saves.
 vim.cmd('nnoremap <buffer> <C-f>h :DashboardFindHistory<cr>')
 vim.cmd('nnoremap <buffer> <C-f>f :DashboardFindFile<cr>')
 vim.cmd('nnoremap <buffer> <C-f>w :DashboardFindWord<cr>')
 vim.cmd('nnoremap <buffer> <C-q>  :q!<cr>')
+
+vim.g.dashboard_default_executive = 'telescope' -- Backend fuzzy finder utility.
+
+vim.cmd('au BufUnload !dashboard :SessionSave') -- Save session after the buffer closing.
 
