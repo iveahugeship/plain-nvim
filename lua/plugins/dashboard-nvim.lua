@@ -24,13 +24,12 @@ vim.g.dashboard_custom_section = {
 }
 
 -- Key Map.
--- FIXME: this binds work on first opened window.
-vim.cmd('nnoremap <buffer> <C-n>  :enew<cr>')
-vim.cmd('nnoremap <buffer> <C-l>  :SessionLoad<cr>') -- FIXME: sessions opened from dashboard doesn't saves.
-vim.cmd('nnoremap <buffer> <C-f>h :DashboardFindHistory<cr>')
-vim.cmd('nnoremap <buffer> <C-f>f :DashboardFindFile<cr>')
-vim.cmd('nnoremap <buffer> <C-f>w :DashboardFindWord<cr>')
-vim.cmd('nnoremap <buffer> <C-q>  :q!<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-n>  :enew<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-l>  :SessionLoad<cr>') -- FIXME: sessions opened from dashboard doesn't saves.
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-f>h :DashboardFindHistory<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-f>f :DashboardFindFile<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-f>w :DashboardFindWord<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-q>  :q!<cr>')
 
 vim.g.dashboard_default_executive = 'telescope' -- Backend fuzzy finder utility.
 
