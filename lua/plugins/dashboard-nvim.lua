@@ -25,7 +25,7 @@ vim.g.dashboard_custom_section = {
 
 -- Key Map.
 vim.cmd('au FileType dashboard nnoremap <buffer> <C-n>  :enew<cr>')
-vim.cmd('au FileType dashboard nnoremap <buffer> <C-l>  :SessionLoad<cr>') -- FIXME: sessions opened from dashboard doesn't saves.
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-l>  :SessionLoad<cr>')
 vim.cmd('au FileType dashboard nnoremap <buffer> <C-f>h :DashboardFindHistory<cr>')
 vim.cmd('au FileType dashboard nnoremap <buffer> <C-f>f :DashboardFindFile<cr>')
 vim.cmd('au FileType dashboard nnoremap <buffer> <C-f>w :DashboardFindWord<cr>')
@@ -33,5 +33,5 @@ vim.cmd('au FileType dashboard nnoremap <buffer> <C-q>  :q!<cr>')
 
 vim.g.dashboard_default_executive = 'telescope' -- Backend fuzzy finder utility.
 
-vim.cmd('au BufUnload !dashboard :SessionSave') -- Save session after the buffer closing.
+vim.cmd('au BufUnload * :SessionSave') -- Save session after the buffer closing.
 
