@@ -1,4 +1,5 @@
--- A Lua for of vim-devicons.
+-- nvim-web-devicons - is vim-devicons for NeoVim.
 -- More: https://github.com/kyazdani42/nvim-web-devicons
-require('plugins.plugin-manager').add_plugin('kyazdani42/nvim-web-devicons')
+
+require('plugins.pmanager').add('kyazdani42/nvim-web-devicons')
 
