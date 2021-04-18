@@ -15,21 +15,21 @@ vim.g.dashboard_custom_header = {
 
 -- Set some sections.
 vim.g.dashboard_custom_section = {
-  a = {description = {'  New File                   ctrl-n '}, command = 'tabnew'},
-  b = {description = {'  Load Last Session          ctrl-l '}, command = 'SessionLoad'},
-  c = {description = {'  Recently Used Files        ctrl-h '}, command = 'DashboardFindHistory'},
-  d = {description = {'  Find File                  ctrl-f '}, command = 'DashboardFindFile'},
-  e = {description = {'  Find Word                  ctrl-w '}, command = 'DashboardFindWord'},
-  f = {description = {'ﰳ  Quit                       ctrl-q '}, command = 'q!'}
+  a = {description = {'  New File                   ctrl-e n '}, command = 'tabnew'},
+  b = {description = {'  Load Last Session          ctrl-e l '}, command = 'SessionLoad'},
+  c = {description = {'  Recently Used Files        ctrl-e h '}, command = 'DashboardFindHistory'},
+  d = {description = {'  Find File                  ctrl-e f '}, command = 'DashboardFindFile'},
+  e = {description = {'  Find Word                  ctrl-e w '}, command = 'DashboardFindWord'},
+  f = {description = {'ﰳ  Quit                       ctrl-e q '}, command = 'q!'}
 }
 
 -- Key Map.
-vim.cmd('au FileType dashboard nnoremap <buffer> <C-n> :tabnew<cr>')
-vim.cmd('au FileType dashboard nnoremap <buffer> <C-l> :SessionLoad<cr>')
-vim.cmd('au FileType dashboard nnoremap <buffer> <C-h> :DashboardFindHistory<cr>')
-vim.cmd('au FileType dashboard nnoremap <buffer> <C-f> :DashboardFindFile<cr>')
-vim.cmd('au FileType dashboard nnoremap <buffer> <C-w> :DashboardFindWord<cr>')
-vim.cmd('au FileType dashboard nnoremap <buffer> <C-q> :q!<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-e>n :tabnew<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-e>l :SessionLoad<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-e>h :DashboardFindHistory<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-e>f :DashboardFindFile<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-e>w :DashboardFindWord<cr>')
+vim.cmd('au FileType dashboard nnoremap <buffer> <C-e>q :q!<cr>')
 
 vim.g.dashboard_default_executive = 'telescope' -- Backend fuzzy finder utility.
 
