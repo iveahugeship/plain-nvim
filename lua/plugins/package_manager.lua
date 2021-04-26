@@ -65,13 +65,21 @@ local package_manager = { }
 function package_manager.install(package)
     _install_package_manager()
 
-    for _,pkg in ipairs(package.meta.dependencies) do
-        _add_pkg{pkg}
+    for _,dependency in ipairs(package.meta.dependencies) do
+        _add_pkg{dependency}
     end
     _add_pkg{package}
 
     _inst_pkg()
     _init_pkg()
+end
+
+function package_manager.install_all(package_list)
+    _install_package_manager()
+
+    for _,package in ipairs(package_list) do
+	package_manager.install(package)
+    end
 end
 
 return package_manager
