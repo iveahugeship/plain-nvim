@@ -4,7 +4,7 @@ mod.meta = {
     name = 'kyazdani42/nvim-tree.lua',
     source = 'https =//github.com/kyazdani42/nvim-tree.lua',
     description = 'File tree for NeoVim',
-    dependencies = {}
+    dependencies = { }
 }
 
 function mod.init()
