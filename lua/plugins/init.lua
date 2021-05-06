@@ -1,6 +1,6 @@
 -- Plugins module.
 
-require('plugins.package_manager').install_all({
+require('plugins.package_manager').install({
     require('plugins.nvim-tree')
 })
 
