@@ -1,13 +1,13 @@
-local mod = { }
+local plugin = { }
 
-mod.meta = {
+plugin.meta = {
     name = 'kyazdani42/nvim-tree.lua',
     source = 'https =//github.com/kyazdani42/nvim-tree.lua',
     description = 'File tree for NeoVim',
     dependencies = { }
 }
 
-function mod.init()
+function plugin.init()
     local tree = require('nvim-tree.config').nvim_tree_callback
 
     -- Tree customize.
@@ -92,5 +92,5 @@ function mod.init()
     }
 end
 
-return mod
+return plugin
 
