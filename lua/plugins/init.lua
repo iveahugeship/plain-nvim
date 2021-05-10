@@ -1,6 +1,6 @@
 -- Plugins module.
 
-require('plugins.paq').install({
+require('plugins.paq-nvim').install({
     require('plugins.nvim-tree')
 })
 

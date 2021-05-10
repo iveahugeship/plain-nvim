@@ -31,7 +31,7 @@ Paq = {
 }
 Paq.__index = Paq
 
--- Create Paq instance.
+-- Create Paq instance as singleton.
 -- @returns table: Paq table instance
 function Paq:_new()
     if self._instance then
