@@ -5,7 +5,6 @@
 local function initial_backend()
     local source_path = 'https://github.com/savq/paq-nvim'
     local install_path = string.format('%s/site/pack/paqs/opt/paq-nvim', vim.fn.stdpath('data'))
-    
     local hasnt_installed = vim.fn.empty(vim.fn.glob(install_path)) > 0
     if hasnt_installed then
         vim.cmd('echo "Plugin manager hasn\'t found. Installing..."')
@@ -31,7 +30,7 @@ Paq = {
 }
 Paq.__index = Paq
 
--- Create Paq instance as singleton.
+-- Create Paq singleton instance.
 -- @returns table: Paq table instance
 function Paq:_new()
     if self._instance then
@@ -90,6 +89,12 @@ function Paq:clean()
     vim.cmd("PaqClean")
 end
 
+-- Execute 'PaqUpdate' command.
+-- @returns nil
+function Paq:update()
+   vim.cmd("PaqUpdate")
+end
+
 
 local module = { }
 
@@ -110,10 +115,11 @@ function module.install(packages)
     for _,package in ipairs(packages) do
         package.init()
     end
+    paq:clean()
 end
 
--- Paq class.
-module.Paq = Paq
+-- Paq instance.
+module.Paq = Paq:create()
 
 return module
 
