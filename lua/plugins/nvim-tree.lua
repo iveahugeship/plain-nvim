@@ -1,15 +1,4 @@
-local plugin = { }
-
-plugin.meta = {
-    name = 'kyazdani42/nvim-tree.lua',
-    source = 'https://github.com/kyazdani42/nvim-tree.lua',
-    description = 'File tree for NeoVim',
-    dependencies = {
-        require('plugins.nvim-web-devicons')
-    }
-}
-
-function plugin.init()
+local function config()
     local tree = require('nvim-tree.config').nvim_tree_callback
 
     -- Tree customize.
@@ -91,5 +80,11 @@ function plugin.init()
     }
 end
 
-return plugin
+local meta = {
+    "kyazdani42/nvim-tree.lua",
+    config = config(),
+    requires = require("plugins.nvim-web-devicons")
+}
+
+return meta
 

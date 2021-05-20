@@ -1,9 +1,9 @@
 -- Packer wrapper.
 
 -- Configuration for Packer instance.
+-- * More: https://github.com/wbthomason/packer.nvim#custom-initialization
 -- @return table: packer configuration table.
 local function get_config()
-    -- More: https://github.com/wbthomason/packer.nvim#custom-initialization
     local config = {
     }
 

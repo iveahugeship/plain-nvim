@@ -1,4 +1,6 @@
 -- Plugins module.
 
-use = require('plugins.packer').use
+local use = require("plugins.packer").use
+
+use(require("plugins.nvim-tree"))
 
