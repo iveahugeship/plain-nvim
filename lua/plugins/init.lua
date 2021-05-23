@@ -1,4 +1,4 @@
--- Plugins module.
+-- Neovim Plugins.
 
 local use = require("plugins.packer").use
 

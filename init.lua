@@ -1,5 +1,5 @@
--- NeoVim configuration file.
+-- NeoVim Configuration File.
 
-require('plugins')
---require('settings')
+require("plugins")
+require("settings")
 

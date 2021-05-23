@@ -1,4 +1,4 @@
--- Nvim-Tree plugin.
+-- Nvim-Tree: a file explorer for Neovim written in lua.
 -- More: https://github.com/kyazdani42/nvim-tree.lua
 
 local function config()

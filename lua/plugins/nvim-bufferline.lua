@@ -1,4 +1,4 @@
--- Nvim-Bufferline plugin.
+-- Nvim-Bufferline: a snazzy buffer line (with minimal tab integration) for Neovim built using lua.
 -- More: https://github.com/akinsho/nvim-bufferline.lua
 
 local function config()
