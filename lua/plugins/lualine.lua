@@ -1,3 +1,6 @@
+-- Lualine plugin.
+-- More: https://github.com/hoob3rt/lualine.nvim
+
 local function config()
     require('lualine').setup {
         options = {

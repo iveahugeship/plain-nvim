@@ -1,3 +1,6 @@
+-- Nvim-Web-Devicons plugin.
+-- More: https://github.com/kyazdani42/nvim-web-devicons
+
 local function config()
 end
 

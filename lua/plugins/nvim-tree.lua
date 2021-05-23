@@ -1,3 +1,6 @@
+-- Nvim-Tree plugin.
+-- More: https://github.com/kyazdani42/nvim-tree.lua
+
 local function config()
     local tree = require('nvim-tree.config').nvim_tree_callback
 
