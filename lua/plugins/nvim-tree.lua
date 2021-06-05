@@ -2,19 +2,20 @@
 -- More: https://github.com/kyazdani42/nvim-tree.lua
 
 local function config()
-    local tree = require('nvim-tree.config').nvim_tree_callback
-
     -- Tree customize.
     vim.g.nvim_tree_side = 'right'
-    vim.g.nvim_tree_width = 40 vim.g.nvim_tree_indent_markers = 1 vim.g.nvim_tree_add_trailing = 1
+    vim.g.nvim_tree_width = 40
+    vim.g.nvim_tree_indent_markers = 1
+    vim.g.nvim_tree_add_trailing = 1
     vim.g.nvim_tree_follow = 1
     vim.g.nvim_tree_root_folder_modifier = ':t'
+    vim.g.nvim_tree_highlight_opened_files = 1
 
     -- File ignoring.
-    vim.g.nvim_tree_gitignore = 1
-    vim.g.nvim_tree_hide_dotfiles = 1
-    vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
-    vim.g.nvim_tree_special_files = { 'README.md', 'Makefile', 'MAKEFILE' }
+    vim.g.nvim_tree_gitignore = 0
+    vim.g.nvim_tree_hide_dotfiles = 0
+    vim.g.nvim_tree_ignore = { '.git'}
+    vim.g.nvim_tree_special_files = { 'README.md', 'Makefile'}
     vim.g.nvim_tree_auto_ignore_ft = { 'startify', 'dashboard' }
 
     -- Auto close/open.
@@ -30,7 +31,7 @@ local function config()
 
     -- Icons.
     vim.g.nvim_tree_show_icons = {
-        git = 0,
+        git = 1,
         folders = 1,
         files = 1
     }
@@ -63,16 +64,17 @@ local function config()
     }
 
     -- Key map.
+    local tree = require('nvim-tree.config').nvim_tree_callback
     vim.cmd('nnoremap <C-f> :NvimTreeToggle<CR>')
     vim.g.nvim_tree_bindings = {
-        ['o']		= tree('cd'),
+        ['e']		= tree('cd'),
         ['o']		= tree('edit'),
         ['v']		= tree('vsplit'),
         ['s']		= tree('split'),
         ['t']		= tree('tabnew'),
         ['<TAB>']	= tree('preview'),
-        ['i']		= tree('toggle_ignored'),
-        ['.']		= tree('toggle_dotfiles'),
+        ["i"]       = tree("toggle_ignored"),
+        ["h"]       = tree("toggle_dotfiles"),
         ['R']		= tree('refresh'),
         ['a']		= tree('create'),
         ['d']		= tree('remove'),

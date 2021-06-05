@@ -42,7 +42,7 @@ local function init_packer()
     packer.init(config)
     packer.reset() -- Recommended if specification code is re-running.
 
-    -- Packer has to manage itselft or it is trying delete leave :)
+    -- Packer has to manage itself or it is trying to delete leave :)
     packer.use {
 	'wbthomason/packer.nvim'
     }
