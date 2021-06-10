@@ -73,8 +73,8 @@ local function config()
         ['s']		= tree('split'),
         ['t']		= tree('tabnew'),
         ['<TAB>']	= tree('preview'),
-        ["i"]       = tree("toggle_ignored"),
-        ["h"]       = tree("toggle_dotfiles"),
+        ['i']       = tree('toggle_ignored'),
+        ['.']       = tree('toggle_dotfiles'),
         ['R']		= tree('refresh'),
         ['a']		= tree('create'),
         ['d']		= tree('remove'),
@@ -86,9 +86,9 @@ local function config()
 end
 
 local meta = {
-    "kyazdani42/nvim-tree.lua",
+    'kyazdani42/nvim-tree.lua',
     config = config(),
-    requires = require("plugins.nvim-web-devicons")
+    requires = require('plugins.nvim-web-devicons')
 }
 
 return meta
