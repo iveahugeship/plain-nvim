@@ -1,6 +1,6 @@
-setl tabstop=2
-setl softtabstop=2
-setl shiftwidth=2
+setl tabstop=4
+setl softtabstop=4
+setl shiftwidth=4
 setl expandtab
 
 setl smarttab

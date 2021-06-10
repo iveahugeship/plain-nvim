@@ -5,10 +5,10 @@ local function config()
     require('bufferline').setup {
         options = {
             numbers = "ordinal",
-	    number_style = "superscript",
-	    mappings = false,
+            number_style = "superscript",
+            mappings = false,
 
-	    indicator_icon = '▎',
+            indicator_icon = '▎',
             buffer_close_icon = '',
             modified_icon = '●',
             close_icon = '',
@@ -19,14 +19,14 @@ local function config()
             max_prefix_length = 15, -- Prefix used when a buffer is de-duplicated.
             tab_size = 18,
 
-	    show_buffer_icons = true,
+            show_buffer_icons = true,
             show_buffer_close_icons = true,
             show_close_icon = true,
             show_tab_indicators = true,
-	    persist_buffer_sort = true,
-	    separator_style = "thin",
-	    enforce_regular_tabs = true,
-	    always_show_bufferline = true,
+            persist_buffer_sort = true,
+            separator_style = "thin",
+            enforce_regular_tabs = true,
+            always_show_bufferline = true,
 
             diagnostics = "nvim_lsp",
             diagnostics_indicator = function(count, level, diagnostics_dict)
@@ -49,12 +49,7 @@ local function config()
                 end
             end,
 
-	    --sort_by = function(buffer_a, buffer_b)
-            --    -- Add custom logic.
-            --    return buffer_a.modified > buffer_b.modified
-            --end,
-
-	    offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "center"}},
+            offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "center"}},
         }
     }
 end
