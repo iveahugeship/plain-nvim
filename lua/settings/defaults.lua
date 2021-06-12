@@ -28,13 +28,13 @@ vim.cmd [[
 
 -- Indentation.
 vim.cmd [[
-  set tabstop=4
-  set softtabstop=4
-  set shiftwidth=4
-  set expandtab
+  setl tabstop=4
+  setl softtabstop=4
+  setl shiftwidth=4
+  setl expandtab
 
-  set smarttab
-  set autoindent
-  set smartindent
+  setl smarttab
+  setl autoindent
+  setl smartindent
 ]]
 
