@@ -33,22 +33,6 @@ local function config()
                 return "("..count..")"
             end,
 
-            custom_filter = function(buf_number)
-                -- Filter out filetypes you don't want to see.
-                if vim.bo[buf_number].filetype ~= "<i-dont-want-to-see-this>" then
-                    return true
-                end
-                -- Filter out by buffer name.
-                if vim.fn.bufname(buf_number) ~= "<buffer-name-I-dont-want>" then
-                    return true
-                end
-                -- Filter out based on arbitrary rules.
-                -- e.g. filter out vim wiki buffer from tabline in your work repo.
-                if vim.fn.getcwd() == "<work-repo>" and vim.bo[buf_number].filetype ~= "wiki" then
-                    return true
-                end
-            end,
-
             offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "center"}},
         }
     }

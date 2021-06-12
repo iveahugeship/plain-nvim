@@ -8,7 +8,7 @@ local function config()
             theme = 'material',
             component_separators = {'', ''},
             section_separators = {'', ''},
-            disabled_filetypes = {}
+            disabled_filetypes = {'NvimTree'}
         },
         sections = {
             lualine_a = {'mode'},
@@ -17,10 +17,7 @@ local function config()
             lualine_x = {'encoding', 'filetype'},
             lualine_y = {'progress'},
             lualine_z = {'location'}
-        },
-        inactive_sections = {},
-        tabline = {},
-        extensions = {}
+        }
     }
 end
 
