@@ -1,24 +1,28 @@
-local function config()
-    local tree = require('nvim-tree.config').nvim_tree_callback
+-- Nvim-Tree: a file explorer for Neovim written in lua.
+-- More: https://github.com/kyazdani42/nvim-tree.lua
 
+local function config()
     -- Tree customize.
     vim.g.nvim_tree_side = 'right'
-    vim.g.nvim_tree_width = 40 vim.g.nvim_tree_indent_markers = 1 vim.g.nvim_tree_add_trailing = 1
+    vim.g.nvim_tree_width = 40
+    vim.g.nvim_tree_indent_markers = 1
+    vim.g.nvim_tree_add_trailing = 1
     vim.g.nvim_tree_follow = 1
     vim.g.nvim_tree_root_folder_modifier = ':t'
+    vim.g.nvim_tree_highlight_opened_files = 1
 
     -- File ignoring.
-    vim.g.nvim_tree_gitignore = 1
-    vim.g.nvim_tree_hide_dotfiles = 1
-    vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
-    vim.g.nvim_tree_special_files = { 'README.md', 'Makefile', 'MAKEFILE' }
+    vim.g.nvim_tree_gitignore = 0
+    vim.g.nvim_tree_hide_dotfiles = 0
+    vim.g.nvim_tree_ignore = { '.git'}
+    vim.g.nvim_tree_special_files = { 'README.md', 'Makefile'}
     vim.g.nvim_tree_auto_ignore_ft = { 'startify', 'dashboard' }
 
     -- Auto close/open.
-    vim.g.nvim_tree_auto_open = 1
-    vim.g.nvim_tree_auto_close = 1
-    vim.g.nvim_tree_quit_on_open = 0
-    vim.g.nvim_tree_tab_open = 1
+    vim.g.nvim_tree_auto_open = 0
+    vim.g.nvim_tree_auto_close = 0
+    vim.g.nvim_tree_quit_on_open = 1
+    vim.g.nvim_tree_tab_open = 0
 
     -- Other function.
     vim.g.nvim_tree_disable_netrw = 0
@@ -27,7 +31,7 @@ local function config()
 
     -- Icons.
     vim.g.nvim_tree_show_icons = {
-        git = 0,
+        git = 1,
         folders = 1,
         files = 1
     }
@@ -60,16 +64,17 @@ local function config()
     }
 
     -- Key map.
+    local tree = require('nvim-tree.config').nvim_tree_callback
     vim.cmd('nnoremap <C-f> :NvimTreeToggle<CR>')
     vim.g.nvim_tree_bindings = {
-        ['o']		= tree('cd'),
+        ['e']		= tree('cd'),
         ['o']		= tree('edit'),
         ['v']		= tree('vsplit'),
         ['s']		= tree('split'),
         ['t']		= tree('tabnew'),
         ['<TAB>']	= tree('preview'),
-        ['i']		= tree('toggle_ignored'),
-        ['.']		= tree('toggle_dotfiles'),
+        ['i']       = tree('toggle_ignored'),
+        ['.']       = tree('toggle_dotfiles'),
         ['R']		= tree('refresh'),
         ['a']		= tree('create'),
         ['d']		= tree('remove'),
@@ -81,9 +86,9 @@ local function config()
 end
 
 local meta = {
-    "kyazdani42/nvim-tree.lua",
+    'kyazdani42/nvim-tree.lua',
     config = config(),
-    requires = require("plugins.nvim-web-devicons")
+    requires = require('plugins.nvim-web-devicons')
 }
 
 return meta
