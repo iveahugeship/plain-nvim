@@ -6,7 +6,7 @@ vim.o.termguicolors = true
 vim.o.showmode = false
 vim.o.cmdheight = 1
 vim.o.splitbelow = true
-vim.o.splitright = true
+vim.o.splitright = false
 
 -- Cursor.
 vim.o.mouse = "a"
