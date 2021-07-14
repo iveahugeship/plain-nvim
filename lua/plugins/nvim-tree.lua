@@ -65,23 +65,22 @@ local function config()
 
     -- Key map.
     local tree = require('nvim-tree.config').nvim_tree_callback
-    vim.cmd('nnoremap <C-f> :NvimTreeToggle<CR>')
     vim.g.nvim_tree_bindings = {
-        ['e']		= tree('cd'),
-        ['o']		= tree('edit'),
-        ['v']		= tree('vsplit'),
-        ['s']		= tree('split'),
-        ['t']		= tree('tabnew'),
-        ['<TAB>']	= tree('preview'),
-        ['i']       = tree('toggle_ignored'),
-        ['.']       = tree('toggle_dotfiles'),
-        ['R']		= tree('refresh'),
-        ['a']		= tree('create'),
-        ['d']		= tree('remove'),
-        ['r']		= tree('full_rename'),
-        ['x']		= tree('cut'),
-        ['y']		= tree('copy'),
-        ['p']		= tree('paste')
+        { key = {'e'},      cb = tree('cd') },
+        { key = {'o'},      cb = tree('edit') },
+        { key = {'s'},      cb = tree('split') },
+        { key = {'v'},      cb = tree('vsplit') },
+        { key = {'t'},      cb = tree('tabnew') },
+        { key = {'<TAB>'},  cb = tree('preview') },
+        { key = {'i'},      cb = tree('toggle_ignored') },
+        { key = {'.'},      cb = tree('toggle_dotfiles') },
+        { key = {'R'},      cb = tree('refresh') },
+        { key = {'a'},      cb = tree('create') },
+        { key = {'d'},      cb = tree('remove') },
+        { key = {'r'},      cb = tree('full_rename') },
+        { key = {'x'},      cb = tree('cut') },
+        { key = {'y'},      cb = tree('copy') },
+        { key = {'p'},      cb = tree('paste') }
     }
 end
 

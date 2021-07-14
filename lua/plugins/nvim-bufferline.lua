@@ -36,6 +36,13 @@ local function config()
             offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "center"}},
         }
     }
+
+    -- Key map.
+    --vim.api.nvim_del_keymap(
+    --    'n',
+    --    '<ESC>'
+    --)
+
 end
 
 local meta = {
