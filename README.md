@@ -14,7 +14,7 @@ This configuration contains base plugins:
 ## Installing
 
 ### Dependencies
-- NeoVim >v0.5.0-dev
+- NeoVim \>v0.5.0-dev
 - [Nerd Fonts](https://www.nerdfonts.com/) - for nvim-web-devicons
 
 ### Process
@@ -42,11 +42,11 @@ git pull origin master
 ### Keymap
 
 Normal mode:
-- <C-f> - toggle NvimTree
-- <C-[> - previous buffer
-- <C-]> - next buffer
-- <C-p> - pick buffer by his letter identificator
-- <C-q> - close buffer
+- \<C-f\> - toggle NvimTree
+- \<C-[\> - previous buffer
+- \<C-]\> - next buffer
+- \<C-p\> - pick buffer by his letter identificator
+- \<C-q\> - close buffer
 
 NvimTree:
 - e - cd to directory
@@ -54,7 +54,7 @@ NvimTree:
 - v - open file with vertical split
 - s - open file with horizontal split
 - t - open file in new tab
-- <TAB> - preview file
+- \<TAB\> - preview file
 - i - toggle ignored
 - . - toggle dotfiles
 - R - refresh tree
