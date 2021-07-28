@@ -38,3 +38,9 @@ vim.cmd [[
   setl smartindent
 ]]
 
+-- Error/warning appearing..
+vim.cmd [[
+  set hidden
+  set confirm
+]]
+
